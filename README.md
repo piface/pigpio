@@ -9,16 +9,10 @@ Works without root (sudo) if you have the right permissions
 
     import pigpio
 
-    # configure GPIO18 pin for output
-    pigpio.setup(18, pigpio.OUT)
-    # configure GPIO5 pin for input
-    pigpio.setup(5, pigpio.IN)
+    pigpio.setup(18, pigpio.OUT)  # configure GPIO18 pin for output
+    pigpio.setup(5, pigpio.IN)  # configure GPIO5 pin for input
 
-    # set GPIO18 pin high
-    pigpio.output(18, True)
+    pigpio.output(18, True)  # set GPIO18 pin high
+    pigpio.output(18, False)  # set GPIO18 pin low
 
-    # set GPIO18 pin low
-    pigpio.output(18, False)
-
-    # set GPIO5 pin high
-    print(pigpio.input(5))
+    print(pigpio.input(5))  # read GPIO5
